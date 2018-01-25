@@ -26,8 +26,19 @@
 (defroute "/" ()
   (render #P"index.html"))
 
-(defroute "/test" ()
-  (render #P"test.html"))
+@route GET "/users"
+(defun users-list ()
+  (render "users/list.html"))
+
+@route POST "/users"
+(defun users-list (&key _parsed)
+  (format t "~a" _parsed)
+  (render "users/list.html"))
+
+@route GET "/users/:user-id"
+(defun users-detail (&key user-id is-edit)
+  (render "users/detail.html"))
+
 
 ;;
 ;; Error pages

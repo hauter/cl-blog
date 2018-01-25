@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+
+{% block title %}Users - Detail{% endblock %}
+
+{% block content %}
+
+<div id="main">
+    <form action="/users" method="post">
+        name: <input type="text" name="person[name]" />
+        email: <input type="email" name="person[email]" />
+        cellphone: <input type="text" name="person[cellphone]" />
+        password: <input type="password" name="person[password]" />
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock %}
