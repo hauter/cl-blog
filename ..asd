@@ -1,9 +1,9 @@
 (in-package :cl-user)
-(defpackage blog-asd
+(defpackage .-asd
   (:use :cl :asdf))
-(in-package :blog-asd)
+(in-package :.-asd)
 
-(defsystem blog
+(defsystem .
   :version "0.1"
   :author "Cody Sun"
   :license ""
@@ -31,4 +31,4 @@
                  (:file "db" :depends-on ("config"))
                  (:file "config"))))
   :description ""
-  :in-order-to ((test-op (load-op blog-test))))
+  :in-order-to ((test-op (load-op .-test))))
