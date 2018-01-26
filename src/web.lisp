@@ -35,10 +35,18 @@
   (format t "~a" _parsed)
   (render "users/list.html"))
 
+
+@route GET "/users/create"
+(defun users-detail ()
+  (render "users/detail.html"))
+
 @route GET "/users/:user-id"
 (defun users-detail (&key user-id is-edit)
   (render "users/detail.html"))
 
+@route PUT "/users/:user-id"
+(defun users-detail (&key user-id is-edit)
+  (render "users/detail.html"))
 
 ;;
 ;; Error pages

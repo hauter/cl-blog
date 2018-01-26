@@ -4,14 +4,30 @@
 
 {% block content %}
 
-<div id="main">
-    <form action="/users" method="post">
-        name: <input type="text" name="person[name]" />
-        email: <input type="email" name="person[email]" />
-        cellphone: <input type="text" name="person[cellphone]" />
-        password: <input type="password" name="person[password]" />
-        <button type="submit">Submit</button>
-    </form>
+<div class="container">
+        <form action="/users" method="post">
+            <div class="form-group">
+                <label>Name:</label>
+                <input class="form-control" type="text" name="person[name]" />
+            </div>
+
+            <div class="form-group" >
+                <label>Email:</label>
+                <input class="form-control" type="email" name="person[email]" />
+            </div>
+
+            <div class="form-group" >
+                <label>Cellphone:</label>
+                <input class="form-control" type="text" name="person[cellphone]" />
+            </div>
+
+            <div class=form-group mb-2">
+                <label>Password:</label>
+                <input class="form-control" type="password" name="person[password]" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        
 </div>
 
 {% endblock %}
