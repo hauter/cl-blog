@@ -5,30 +5,37 @@
 {% block content %}
 
 <div class="container">
-        <form action="/users" method="post">
-            <div class="form-group">
-                <label>Name:</label>
-                <input class="form-control" type="text" name="person[name]" />
-            </div>
+    <div class="jumbotron mt-3">
+        <h1>User Details</h1>
+        <p class="lead" >Create / Edit User Info</p>
+    </div>
 
-            <div class="form-group" >
-                <label>Email:</label>
-                <input class="form-control" type="email" name="person[email]" />
-            </div>
+    <div class="row">
+        <div class="col-5">
+            <form action="/users" method="post">
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input class="form-control" type="text" name="person[name]" />
+                </div>
 
-            <div class="form-group" >
-                <label>Cellphone:</label>
-                <input class="form-control" type="text" name="person[cellphone]" />
-            </div>
+                <div class="form-group" >
+                    <label>Email:</label>
+                    <input class="form-control" type="email" name="person[email]" />
+                </div>
 
-            <div class=form-group mb-2">
-                <label>Password:</label>
-                <input class="form-control" type="password" name="person[password]" />
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="form-group" >
+                    <label>Cellphone:</label>
+                    <input class="form-control" type="text" name="person[cellphone]" />
+                </div>
 
-        </form>
-        
+                <div class=form-group">
+                    <label>Password:</label>
+                    <input class="form-control" type="password" name="person[password]" />
+                </div>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+            </form>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
